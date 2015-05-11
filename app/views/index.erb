@@ -1,0 +1,111 @@
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+      	<% if session[:user_id] %>
+          <div id='navbar' class='navbar-form navbar-right'>
+            <a class='btn btn-warning' href='/logout'>Logout</a>
+          </div>
+        <% end %>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          </button>
+          <div class='navbar-form navbar-left'><img id='streamify' src="/imgs/streamifylogo.png"></div>
+          <a class="navbar-brand nav-left" href="#">Streamify</a>
+          <div id='navbar' class='navbar-form navbar-left'>
+            <div class="spacer"></div>
+          </div>
+          
+          <div id='navbarleft' class='navbar-form navbar-left'>
+          <% if session[:user_id] %>
+            <form id='artistlikes' method='post'>
+              <select id='artistselecter' name='artist' class='btn btn-default'> 
+                <option value='' disabled selected>Liked Artists</option>
+              </select>
+              <input type='submit' name='submit' value='GO' class='btn btn-success'/>
+            </form>
+          <% end %>
+          </div>
+          
+          
+        </div>
+        <% if session[:user_id] %>
+        <div id="navbar" class='login' style='display: none'>
+        <% else %>
+        <div id="navbar" class='login' class="navbar-collapse collapse">
+        <% end %>
+          <form id='loginform' class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type='text' size='30' name='username' placeholder="John Doe" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type='password' size='30' name='password' placeholder="*************"class="form-control">
+            </div>
+            <button type="submit" id='loggedin' class="btn btn-success">Sign in</button>
+            <button id='register' class="btn btn-default">Sign up</button>
+          </form>
+        </div>
+        <% if session[:user_id] %>
+        <div class='register' style='display:none'>
+        <% else %>
+        <div class='register' style='display:none' class="navbar-collapse collapse">
+        <% end %>
+          <form id='registerform' class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type='text' size='30' name='user[username]' placeholder="John Doe" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type='password' size='30' name='user[password]' placeholder="*************"class="form-control">
+            </div>
+            <button type="submit" id='registered' class="btn btn-success">Sign up</button>
+            <button id='login' class="btn btn-default">Sign in</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+<div class='starter-template'>
+  <div class="row">
+      <% if session[:user_id] %>
+      <div class="container" id="search">
+      <% else %>
+      <div class="container" id="search" style='display:none'>
+      <% end %>
+      <form id='artistform' action='/artist' method='post'>
+      <div class="ui-widget">
+        <input id="artist" name='artist' placeholder='Enter an Artist'/>
+        <input type='submit' name='submit' value='GO'/>
+      </div>
+      
+    </form>
+  </div>
+  <div class="row" id='coloreddiv'>
+  	<div id="leftbutton" class="col-md-3">
+  		<% if session[:user_id] %>
+  			<button id='randomplay' class='btn btn-default'><img class='icon' src='/imgs/shuffle.png'></button></div>
+  		<% else %>
+  	</div>
+  		<% end %>
+    <div id="player" class="col-md-6"><img id='banner' src="/imgs/banner.png"></div>
+  	<div id="rightbutton" class="col-md-3">
+  		<% if session[:user_id] %>
+  			<button type='button' id='likeArtist' class='btn btn-default'><img class='icon' src='/imgs/like.png'></button></div>
+  		<% else %>
+  		  </div>
+  		<% end %>
+    </div>
+	
+		<br>
+		
+
+		<div id="options">
+			<br>
+			<button type='button' id='listSimilarArtist' class="btn btn-default btn-sm"> View Similar Artists</button>
+			<form id='artistlist' method='post'>
+	  		<select id='artistselect' name='artist' placeholder='Pick an Artist' class="btn btn-default"> </select>
+	  		<input type='submit' name='submit' value='GO' class="btn btn-success btn-sm"/>
+			</form>
+		</div>
+	</div>
+
+</div>
+
+</div>
+

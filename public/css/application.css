@@ -1,0 +1,195 @@
+
+
+th {
+  text-align: left;
+}
+.artist {
+	text-align: center;
+}
+#artistform {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+#player {
+/*	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	text-align: center;*/
+	display: inline-block;
+	padding: 10px;
+}
+
+#options {
+	display:none;
+	width:520px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.hidden {
+	display:none;
+}
+#similarArtist{
+	display:inline-block;
+	text-align: center;
+}
+#listSimilarArtist{
+	display:inline-block;
+	text-align: center;
+}
+
+#artistlist{
+	display: inline-block;
+	text-align: center;
+}
+select{
+	display:inline-block;
+	text-align: center;
+}
+iframe {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	clear:both;
+}
+
+.right {
+		float: right;
+}
+
+#randomplay{
+	display:inherit;
+	float: right;
+	background: white;
+	border: 2px solid black;
+	padding-top: 13px;
+	padding-bottom: 12px;
+}
+
+#leftbutton{
+/*	display: block;
+	clear:right;
+	float:left;
+	position: fixed;
+	top: 250px;
+	left: 300px;*/
+	display: inline-block;
+	margin-top: 100px;
+}
+#rightbutton{
+/*	clear:left;
+	float:right;
+	position: fixed;
+	top: 250px;
+	right: 300px;*/
+	display: inline-block;
+	margin-top: 100px;
+}
+.icon {
+	height:auto;
+	width: 50px;
+	vertical-align: center;
+}
+
+#page {
+	width:60%;
+	height:auto;
+	min-height: 400px;
+	margin-right: auto;
+	margin-left: auto;
+	border:1px solid black;
+	padding:20px;
+}
+
+#likeArtist {
+	border: 2px solid black;
+	float:left;
+
+}
+
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+body {
+    background-image: url("/imgs/linen.png");
+}
+
+.ui-autocomplete-loading { background: white url('/imgs/ui-anim_basic_16x16.gif') right center no-repeat; }
+.ui-widget { margin-top:20px}
+#artist { 
+	width: 25em; 
+	text-align: center;
+
+}
+#log { height: 24px; width: 532px; overflow: auto;}
+.ui-autocomplete.ui-front.ui-menu.ui-widget.ui-widget-content.ui-corner-all{
+	display: none;
+	width: 148px;
+	top: 27px;
+	left: 42.828125px;
+}
+.ui-menu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: block;
+	outline: none;
+}
+
+.ui-helper-hidden-accessible{
+	display:none;
+}
+.ui-menu-item {
+	background-color: white;
+	text-align: center;
+	opacity: 0.5;
+	color:black;
+	font-weight: bold;
+
+}
+.ui-menu-item a{
+	color:black;
+}
+#search {
+	padding: 20px;
+}
+#artistselect {
+	height:30px;
+	width: 161px;
+}
+/*#artistlikes {
+	clear:both;
+	float: right;
+}*/
+#artistselecter {
+	height:32px;
+}
+
+#coloreddiv{
+	background-image: url("/imgs/binding_dark.png");
+	min-height: 300px;
+}
+
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 6%;
+	text-align: center;
+	background-image: url("/imgs/binding_dark.png");
+	color:rgb(97, 97, 97);
+}
+
+#banner {
+	width: 100%;
+	text-align: center;
+}
+#streamify {
+	height:30px;
+	width:auto;
+	}
